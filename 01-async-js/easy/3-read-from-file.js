@@ -5,13 +5,26 @@
 // Try to do an expensive operation below the file read and see how it affects the output. 
 // Make the expensive operation more and more expensive and see how it affects the output. 
 
-const fs=require('fs');
-const filePath='a.txt';
-fs.readFile(filePath,'utf-8',function(err,data){
+// const fs=require('fs');
+// const filePath='a.txt';
+// fs.readFile(filePath,'utf-8',function(err,data){
+//   if(err){
+//     console.log(err);
+//     return;
+//   }
+//   console.log('File content: ',data);
+// });
+
+
+const fs=require("fs")
+fs.readFile("a.txt","utf-8",function(err,data){
   if(err){
     console.log(err);
-    return;
   }
-  console.log('File content: ',data);
-});
+  else{
+    console.log(data)
+  }
+  
+})
+
 
